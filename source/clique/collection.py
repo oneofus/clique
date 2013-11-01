@@ -255,6 +255,8 @@ class Collection(object):
             data['holes'] = self.holes().format('{ranges}')
 
             indexes = list(self.indexes)
+            data['hashes'] = '#' * len(str(indexes[-1]))
+
             if len(indexes) == 1:
                 data['range'] = '{0}'.format(indexes[0])
             else:
